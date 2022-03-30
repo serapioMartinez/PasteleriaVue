@@ -1,11 +1,16 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
   <router-view/>
+  <Footer/>
 </template>
-
+<script>
+import Footer from './components/Footer.vue'
+export default {
+    name: 'App',
+    components:{
+        Footer
+    }
+}
+</script>
 <style>
 @font-face {
     font-family: Lord;

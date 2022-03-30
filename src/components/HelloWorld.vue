@@ -1,19 +1,14 @@
 <template>
 
-    <div id="admin">
-        <a href="./inventario.html">
-        <p>ADMIN</p>
-        <span>&#9660;</span>
-        </a>
-    </div>
+    <Admin/>
     <section>
         <div class="presentacion">
             <h1 class="titulo">PASTENAUTA</h1>
             <p class="frase">"Lo que se hace con amor esta bien hecho."</p>
             <span class="autor">-Vincent Van Gogh-</span>
             <div class="botones">
-                <button><a href="#carta">Carta</a></button>
-                <button><a href="./formulario.html">Hacer pedido</a></button>
+                <button><router-link to="/#carta">Carta</router-link></button>
+                <button><router-link to="/formulario">Formulario</router-link></button>
             </div>
         </div>
     </section>
@@ -42,21 +37,17 @@
             <hr>
         </div>
     </section>
-    <Footer/>
 </template>
 
 <script>
-import Footer from '@/components/Footer.vue';
 import Elemento from '@/components/Elemento.vue';
+import Admin from '@/components/Admin.vue'
 
 export default {
   name: 'HelloWorld',
-  props: {
-    msg: String
-  },
   components:{
-    Footer,
-    Elemento
+    Elemento,
+    Admin
   }
 }
 </script>
